@@ -31,10 +31,11 @@ cymi linie z sygnaturami.
 %setup -q
 
 %build
-CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s" \
-./configure %{_target_platform} \
-	--prefix=%{_prefix} \
-	--mandir=%{_mandir}
+CFLAGS="$RPM_OPT_FLAGS"
+LDFLAGS="-s"
+export CFLAGS LDFLAGS
+%configure
+
 make
 
 %install
@@ -51,7 +52,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc {AUTHORS,README,ChangeLog,CREDITS,TODO}.gz
-
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/%{name}
+
+%{_datadir}/gensig
 %{_mandir}/man1/*
