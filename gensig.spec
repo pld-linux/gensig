@@ -37,7 +37,7 @@ LDFLAGS="-s"
 export CFLAGS LDFLAGS
 %configure
 
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
