@@ -8,7 +8,7 @@ Group(pl):	Aplikacje/Poczta
 Copyright:	GPL
 Source:		http://www.geeks.com/~robf/gensig/%{name}-%{version}.tar.gz
 URL:		http://www.geeks.com/~robf/gensig/
-BuildRoot:   	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 gensig  is  a  random  signature/tagline generator. It turns your
