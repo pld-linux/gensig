@@ -2,7 +2,7 @@ Summary:	Random signature generator
 Summary(pl):	Generator losowych sygnatur
 Name:		gensig
 Version:	2.2
-Release:	1
+Release:	2
 Group:		Applications/Mail
 Group(pl):	Aplikacje/Poczta
 Copyright:	GPL
