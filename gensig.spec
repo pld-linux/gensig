@@ -55,14 +55,3 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
 %{_mandir}/man1/*
-
-%changelog
-* Sat May  8 1999 Piotr Czerwiñski <pius@pld.org.pl>
-  [2.1-1]
-- updated to 2.1,
-- added man pages,
-- package is FHS 2.0 compliant.
-
-* Thu Apr 28 1999 Piotr Czerwiñski <pius@pld.org.pl>
-  [2.0-1]
-- initial RPM release for PLD.
