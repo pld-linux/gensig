@@ -1,14 +1,13 @@
 Summary:	Random signature generator
 Summary(pl):	Generator losowych sygnatur
 Name:		gensig
-Version:	2.0
+Version:	2.1
 Release:	1
 Group:		Applications/Mail
 Group(pl):	Aplikacje/Poczta
 Copyright:	GPL
 URL:		http://www.geeks.com/~robf/gensig/
 Source:		http://www.geeks.com/~robf/gensig/%{name}-%{version}.tar.gz
-BuildPrereq:	rpm >= 3.0.1-4
 BuildRoot:   	/tmp/%{name}-%{version}-root
 
 %description
@@ -32,8 +31,10 @@ cymi linie z sygnaturami.
 %setup -q
 
 %build
-%configureS
-
+autoconf
+CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s" \
+./configure %{_target} \
+	--prefix=/usr
 make
 
 %install
@@ -41,7 +42,8 @@ rm -rf $RPM_BUILD_ROOT
 
 make install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf README ChangeLog AUTHORS CREDITS TODO
+gzip -9nf $RPM_BUILD_ROOT/usr/share/man/man1/* \
+	README ChangeLog AUTHORS CREDITS TODO
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -52,8 +54,15 @@ rm -rf $RPM_BUILD_ROOT
 
 %attr(755,root,root) /usr/bin/*
 /usr/share/gensig
+/usr/share/man/man1/*
 
 %changelog
+* Sat May  8 1999 Piotr Czerwiñski <pius@pld.org.pl>
+  [2.1-1]
+- updated to 2.1,
+- added man pages,
+- package is FHS 2.0 compliant.
+
 * Thu Apr 28 1999 Piotr Czerwiñski <pius@pld.org.pl>
   [2.0-1]
 - initial RPM release for PLD.
