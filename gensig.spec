@@ -2,11 +2,13 @@ Summary:	Random signature generator
 Summary(pl):	Generator losowych sygnaturek
 Name:		gensig
 Version:	2.2
-Release:	3
+Release:	4
 License:	GPL
 Group:		Applications/Mail
 Source0:	http://www.geeks.com/~robf/gensig/%{name}-%{version}.tar.gz
 URL:		http://www.geeks.com/~robf/gensig/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -30,7 +32,11 @@ sygnaturkami.
 %setup -q
 
 %build
-%configure2_13
+rm -f missing
+aclocal
+autoconf
+automake -a -c -f
+%configure
 
 %{__make}
 
