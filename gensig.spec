@@ -4,28 +4,29 @@ Name:		gensig
 Version:	2.2
 Release:	2
 Group:		Applications/Mail
+Group(pt):	Aplicações/Correio Eletrônico
 Group(pl):	Aplikacje/Poczta
-Copyright:	GPL
-Source:		http://www.geeks.com/~robf/gensig/%{name}-%{version}.tar.gz
+License:	GPL
+Source0:	http://www.geeks.com/~robf/gensig/%{name}-%{version}.tar.gz
 URL:		http://www.geeks.com/~robf/gensig/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-gensig  is  a  random  signature/tagline generator. It turns your
+gensig is a random signature/tagline generator. It turns your
 ~/.signature into a FIFO, and every time it's read, it has a dif-
-ferent  tagline  in  your  signature. It is very configurable and
-doesn't load the whole taglines list into memory. It also reloads
-the  taglines list automatically if it has changed on disk and is
-capable of handling multiple input files for taglines.
+ferent tagline in your signature. It is very configurable and doesn't
+load the whole taglines list into memory. It also reloads the taglines
+list automatically if it has changed on disk and is capable of
+handling multiple input files for taglines.
 
 %description -l pl
-gensig jest generatorem losowych sygnaturek pocztowych.
-Zmienia twój plik ~/.signature  w  FIFO,  w  efekcie  czego  przy
-ka¿dym  jego czytaniu otrzymywana jest nowa sygnaturka. Jest mocno
-konfigurowalny, nie ³aduje wszytkich sygnatur do pamiêci, prze³a­
-dowuje automatycznie listê etykiet za ka¿dym razem gdy ulegnie 
-ona zmianie, a tak¿e umo¿liwia pracê z wieloma plikami zawieraj±-
-cymi linie z sygnaturkami.
+gensig jest generatorem losowych sygnaturek pocztowych. Zmienia twój
+plik ~/.signature w FIFO, w efekcie czego przy ka¿dym jego czytaniu
+otrzymywana jest nowa sygnaturka. Jest mocno konfigurowalny, nie
+³aduje wszytkich sygnatur do pamiêci, prze³a­ dowuje automatycznie
+listê etykiet za ka¿dym razem gdy ulegnie ona zmianie, a tak¿e
+umo¿liwia pracê z wieloma plikami zawieraj±- cymi linie z
+sygnaturkami.
 
 %prep
 %setup -q
