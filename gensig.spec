@@ -1,13 +1,13 @@
 Summary:	Random signature generator
 Summary(pl):	Generator losowych sygnaturek
 Name:		gensig
-Version:	2.2
-Release:	4
+Version:	2.3
+Release:	1
 License:	GPL
 Group:		Applications/Mail
-Source0:	http://www.geeks.com/~robf/gensig/%{name}-%{version}.tar.gz
-# Source0-md5:	6a3cd659ffed9c32e027114534a27047
-URL:		http://www.geeks.com/~robf/gensig/
+Source0:	http://www.geekthing.com/~robf/gensig/%{name}-%{version}.tar.gz
+# Source0-md5:	1b4a0b3713b8e377baeef606f584d539
+URL:		http://www.geekthing.com/~robf/gensig/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -33,9 +33,9 @@ sygnaturkami.
 %setup -q
 
 %build
-rm -f missing
 %{__aclocal}
 %{__autoconf}
+%{__autoheader}
 %{__automake}
 %configure
 
@@ -44,7 +44,8 @@ rm -f missing
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -53,6 +54,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README ChangeLog AUTHORS CREDITS TODO
 %attr(755,root,root) %{_bindir}/*
-
 %{_datadir}/gensig
 %{_mandir}/man1/*
