@@ -31,10 +31,10 @@ cymi linie z sygnaturami.
 %setup -q
 
 %build
-autoconf
 CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s" \
 ./configure %{_target} \
-	--prefix=/usr
+	--prefix=%{_prefix} \
+	--mandir=%{_mandir}
 make
 
 %install
@@ -53,7 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc {AUTHORS,README,ChangeLog,CREDITS,TODO}.gz
 
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/gensig
+%{_datadir}/%{name}
 %{_mandir}/man1/*
 
 %changelog
