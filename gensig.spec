@@ -1,14 +1,14 @@
 Summary:	Random signature generator
 Summary(pl):	Generator losowych sygnatur
 Name:		gensig
-Version:	2.1
+Version:	2.2
 Release:	1
 Group:		Applications/Mail
 Group(pl):	Aplikacje/Poczta
 Copyright:	GPL
-URL:		http://www.geeks.com/~robf/gensig/
 Source:		http://www.geeks.com/~robf/gensig/%{name}-%{version}.tar.gz
-BuildRoot:	/tmp/%{name}-%{version}-root
+URL:		http://www.geeks.com/~robf/gensig/
+BuildRoot:   	/tmp/%{name}-%{version}-root
 
 %description
 gensig  is  a  random  signature/tagline generator. It turns your
