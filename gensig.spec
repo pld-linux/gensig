@@ -42,7 +42,7 @@ rm -rf $RPM_BUILD_ROOT
 
 make install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf $RPM_BUILD_ROOT/usr/share/man/man1/* \
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
 	README ChangeLog AUTHORS CREDITS TODO
 
 %clean
@@ -54,7 +54,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %attr(755,root,root) /usr/bin/*
 /usr/share/gensig
-/usr/share/man/man1/*
+%{_mandir}/man1/*
 
 %changelog
 * Sat May  8 1999 Piotr Czerwiñski <pius@pld.org.pl>
