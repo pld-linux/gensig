@@ -6,6 +6,7 @@ Release:	4
 License:	GPL
 Group:		Applications/Mail
 Source0:	http://www.geeks.com/~robf/gensig/%{name}-%{version}.tar.gz
+# Source0-md5:	6a3cd659ffed9c32e027114534a27047
 URL:		http://www.geeks.com/~robf/gensig/
 BuildRequires:	autoconf
 BuildRequires:	automake
