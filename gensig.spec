@@ -8,7 +8,7 @@ Group:		Applications/Mail
 Source0:	http://www.geekthing.com/~robf/gensig/%{name}-%{version}.tar.gz
 # Source0-md5:	1b4a0b3713b8e377baeef606f584d539
 URL:		http://www.geekthing.com/~robf/gensig/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.13
 BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
