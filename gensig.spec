@@ -23,9 +23,9 @@ handling multiple input files for taglines.
 gensig jest generatorem losowych sygnaturek pocztowych. Zmienia twój
 plik ~/.signature w FIFO, w efekcie czego przy ka¿dym jego czytaniu
 otrzymywana jest nowa sygnaturka. Jest mocno konfigurowalny, nie
-³aduje wszytkich sygnatur do pamiêci, prze³a­ dowuje automatycznie
+³aduje wszytkich sygnatur do pamiêci, prze³adowuje automatycznie
 listê etykiet za ka¿dym razem gdy ulegnie ona zmianie, a tak¿e
-umo¿liwia pracê z wieloma plikami zawieraj±- cymi linie z
+umo¿liwia pracê z wieloma plikami zawieraj±cymi linie z
 sygnaturkami.
 
 %prep
