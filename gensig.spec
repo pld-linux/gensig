@@ -4,8 +4,9 @@ Name:		gensig
 Version:	2.2
 Release:	2
 Group:		Applications/Mail
-Group(pt):	Aplicações/Correio Eletrônico
+Group(de):	Applikationen/Post
 Group(pl):	Aplikacje/Poczta
+Group(pt):	Aplicações/Correio Eletrônico
 License:	GPL
 Source0:	http://www.geeks.com/~robf/gensig/%{name}-%{version}.tar.gz
 URL:		http://www.geeks.com/~robf/gensig/
@@ -32,9 +33,6 @@ sygnaturkami.
 %setup -q
 
 %build
-CFLAGS="$RPM_OPT_FLAGS"
-LDFLAGS="-s"
-export CFLAGS LDFLAGS
 %configure
 
 %{__make}
@@ -44,8 +42,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
-	README ChangeLog AUTHORS CREDITS TODO
+gzip -9nf README ChangeLog AUTHORS CREDITS TODO
 
 %clean
 rm -rf $RPM_BUILD_ROOT
