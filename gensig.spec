@@ -53,7 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc {AUTHORS,README,ChangeLog,CREDITS,TODO}.gz
 
 %attr(755,root,root) /usr/bin/*
-/usr/share/gensig
+%{_datadir}/gensig
 %{_mandir}/man1/*
 
 %changelog
