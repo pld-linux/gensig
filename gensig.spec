@@ -8,6 +8,7 @@ Group(pl):	Aplikacje/Poczta
 Copyright:	GPL
 URL:		http://www.geeks.com/~robf/gensig/
 Source:		http://www.geeks.com/~robf/gensig/%{name}-%{version}.tar.gz
+BuildPrereq:	rpm >= 3.0.1-4
 BuildRoot:   	/tmp/%{name}-%{version}-root
 
 %description
@@ -31,9 +32,8 @@ cymi linie z sygnaturami.
 %setup -q
 
 %build
-CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s" \
-./configure \
-	--prefix=/usr
+%configureS
+
 make
 
 %install
