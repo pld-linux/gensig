@@ -1,5 +1,5 @@
 Summary:	Random signature generator
-Summary(pl):	Generator losowych sygnaturek
+Summary(pl.UTF-8):   Generator losowych sygnaturek
 Name:		gensig
 Version:	2.3
 Release:	1
@@ -20,13 +20,13 @@ load the whole taglines list into memory. It also reloads the taglines
 list automatically if it has changed on disk and is capable of
 handling multiple input files for taglines.
 
-%description -l pl
-gensig jest generatorem losowych sygnaturek pocztowych. Zmienia twój
-plik ~/.signature w FIFO, w efekcie czego przy ka¿dym jego czytaniu
+%description -l pl.UTF-8
+gensig jest generatorem losowych sygnaturek pocztowych. Zmienia twÃ³j
+plik ~/.signature w FIFO, w efekcie czego przy kaÅ¼dym jego czytaniu
 otrzymywana jest nowa sygnaturka. Jest mocno konfigurowalny, nie
-³aduje wszystkich sygnatur do pamiêci, prze³adowuje automatycznie
-listê etykiet za ka¿dym razem gdy ulegnie ona zmianie, a tak¿e
-umo¿liwia pracê z wieloma plikami zawieraj±cymi linie z
+Å‚aduje wszystkich sygnatur do pamiÄ™ci, przeÅ‚adowuje automatycznie
+listÄ™ etykiet za kaÅ¼dym razem gdy ulegnie ona zmianie, a takÅ¼e
+umoÅ¼liwia pracÄ™ z wieloma plikami zawierajÄ…cymi linie z
 sygnaturkami.
 
 %prep
