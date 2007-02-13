@@ -1,5 +1,5 @@
 Summary:	Random signature generator
-Summary(pl.UTF-8):   Generator losowych sygnaturek
+Summary(pl.UTF-8):	Generator losowych sygnaturek
 Name:		gensig
 Version:	2.3
 Release:	1
